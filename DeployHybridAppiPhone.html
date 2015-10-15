@@ -71,8 +71,10 @@
 		</div>
 		<div>
 			<p>replace the content of "www" folder with the content of your app.</p>
-			<p>Set <strong>Bundle ID</strong>, open up the file "config.xml" and set the <strong>id</strong> </p>
-			<pre><code> widget id="com.ionicframework.myAppName4xxxxxx" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0"</code></pre>
+			<p>Set <a name="bundleId"></a><strong>Bundle ID</strong>, open up the file "config.xml" and set the <strong>id</strong> </p>
+			<pre><code> widget id="com.techaspect.myAppName4xxxxxx" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0"</code></pre>
+			<p>Take note of the Bundle ID, we will be using it to set up the <a href="#provisioningProfile">provisioning profile</a> later.</p>
+			<p>Later we will use the same Bundle ID in </p>
 			<p>Next we will build the application for IOS. </p>
 			<p>Run the following command, make sure you the in the app folder. For me it will be "myAppName".</p>
 		</div>
@@ -185,12 +187,23 @@
 			<p>Next, login to your <a href="https://developer.apple.com/account/ios/identifiers/bundle/bundleList.action" onclick="__gaTracker('send', 'event', 'outbound-article', 'https://developer.apple.com/account/ios/identifiers/bundle/bundleList.action', 'iOS Provisioning Portal');" target="_blank">iOS Provisioning Portal</a>; it’s time to create the App ID and iOS provisioning profile for your app!</p>
 		</div>
 		<div>
-			<p>Get the Bundle ID of your project</p>
-			<p><img src="/img/itunes_connect_ios_device.png" alt="Connecting your iOS device to iTunes"></p>
+			<p>Remember the Bundle ID you set for the project <a href="#bundleId">above</a> will be using here.</p>
+			<p>In your provisioning portal, go to the <a href="https://developer.apple.com/account/ios/identifiers/bundle/bundleList.action" onclick="__gaTracker('send', 'event', 'outbound-article', 'https://developer.apple.com/account/ios/identifiers/bundle/bundleList.action', 'App IDs section');" target="_blank">App IDs section</a>.</p>
+			<p><img src="/img/provisioning_portal_add_appid.png" alt="Provisioning portal adding a new app id"></p>
+			<p>Give your app a name and then scroll down a little to the explicit app id section and put in the same bundle identifier that you had set up for your project.</p>
+			<p><img src="/img/explicit_app_id.jpg" alt="Setting an explicit app id"></p>
 		</div>
 		<div>
-			<p>Next, you want to go back to Xcode 6 and go into Devices window by either pressing SHIFT+CMD+2 or using the menu option here:</p>
-			<p><img src="/img/xcode6_organizer_menu_option.png" alt="Xcode 6 organizer menu option"></p>
+			<p>Then click “continue” and on the following confirmation screen, click “submit”.</p>
+			<p>Choose <b>iOS App Development</b> for the type and click “continue”.</p>
+			<p><img src="/img/type_of_provisioning_profile.jpg" alt="Type of provisioning profile"></p>
+			<p>On the next screen, choose the <b>App ID</b> that you just added in the drop down.</p>
+			<p><img src="/img/select_an_app_id.png" alt="Select an app id for the new provisioning profile"></p>
+			<p>On the next screen, select the <b>development certificate</b> and click “continue”.</p>
+			<p>Now, finally you can <b>select the devices</b> that your app is allowed to be installed on so select the one that you added earlier.</p>
+			<p>On the final screen, you can give the provisioning profile a name and <b>generate it</b>.</p>
+			<p>On the final screen, you can give the provisioning profile a name and <b>generate it</b>.</p>
+			<p>Click the blue <b style="color:blue;">Download</b> button and the profile will be downloaded onto your computer. Go to the location where you saved it and then <b>double-click the provisioning profile</b>.</p>
 		</div>
 	</article>
 	<!-- END: Create a provisioning profile for your app  -->
