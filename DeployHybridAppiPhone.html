@@ -21,7 +21,7 @@
 	<!-- START: Setting up ionic project -->
 	<article>
 		<a name="setUpIonic"></a>
-		<h3>Seting Up Ionic </h3>
+		<h3>Seting Up Ionic and Build for IOS </h3>
 		<div>
 			<p>Install Node <a href="https://nodejs.org/en/">click here</a> </p>
 			<p>Once the node is installed, we have to install coedova before installing the Ionic</p>
@@ -85,11 +85,65 @@
 			</pre>
 		</div>
 
+		<div>
+			<p>For details refrence how to setup projects using ionic <a href="http://ionicframework.com/getting-started/">click here</a></p>
+		</div>
+
 	</article>
 	<!-- END: Setting up ionic project -->
 
+	<!-- START: opening up project in XCODE -->
+	<article>
+		<a name="openXcode"></a>
+		<h3>Open App in Xcode</h3>
+		<div>
+			<p>Now as we will be deploying the app from xcode, we will import the project in xcode. </p>
+			<p>Opening up the project in Xcode is as simple at this point.</p>
+			<p>Open up the project folder and go to this location "platforms" and then "ios". </p>
+			<p>You will find the file with extention ".xcodeproj". This is the Xcode project file. Open it up with using Xcode. Ideally it will open with Xcode.  </p>
+			<br>
+			<p>or you can just run the following command from the terninal.</p>
+		</div>
 
+		<div class="highlight">
+			<pre>	
+				<code class="language-text" data-lang="text">$ open platforms/ios/myAppName.xcodeproj</code>
+			</pre>
+		</div>
+		<div>
+			<p>This command will open the project in xcode.</p>
+		</div>
+	</article>
+	<!-- END: opening up project in XCODE -->
 
+	<!-- START: Request your certificates -->
+	<article>
+		<a name="requestCertificates"></a>
+		<h3>Request your certificates</h3>
+		<div>
+			<p>Your certificate is used to code sign the apps and they uniquely identify you. In this step, we have to generate and request two certificates: one for development and one for distribution. We only need to do this once (not for each app!).</p>
+			<p>The development one is used for testing while the distribution certificate is used to sign your app bundle for distribution in the App Store once it’s ready.</p>
+			<p>Now that you’re enrolled in the Apple developer program, you can launch Xcode 5 and go to your preferences menu. Then go to the “Accounts” tab.</p>
+			<p>You will find the file with extention ".xcodeproj". This is the Xcode project file. Open it up with using Xcode. Ideally it will open with Xcode.</p>
+			<p>Fill in your Apple iOS developer account details here.</p>
+		</div>
+		<div>
+			<p><img src="/img/xcode_accounts.png" alt="Xcode accounts panel" /></p>
+		</div>
+
+		<div>
+			<p>Once you’re signed in, click “View Details…” and you’ll get to this panel where you can see your existing certificates and provisioning profiles.</p>
+			<p>If you click the “+” icon below the certificates pane, you can request a new iOS Development Certificate. Go ahead and do that now.
+			Also do the same thing and request an iOS Distribution Certificate as well.</p>
+		</div>
+		<div>
+			<p><img src="/img/request_ios_development_certificate.png" alt="Requesting an iOS development certificate in Xcode"></p>
+		</div>
+		<div>
+			<p>Afterwards, if you login to your your <a href="https://developer.apple.com/account/ios/certificate/certificateList.action?type=development" onclick="__gaTracker('send', 'event', 'outbound-article', 'https://developer.apple.com/account/ios/certificate/certificateList.action?type=development', 'iOS provisioning portal');" target="_blank">iOS provisioning portal</a> and go to “Certificates”, you can see that it’s actually been created! </p>
+		</div>
+	</article>
+	<!-- END: Request your certificates -->
 
 	</body>
 </html>
