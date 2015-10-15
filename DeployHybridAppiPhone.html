@@ -133,8 +133,7 @@
 
 		<div>
 			<p>Once you’re signed in, click “View Details…” and you’ll get to this panel where you can see your existing certificates and provisioning profiles.</p>
-			<p>If you click the “+” icon below the certificates pane, you can request a new iOS Development Certificate. Go ahead and do that now.
-			Also do the same thing and request an iOS Distribution Certificate as well.</p>
+			<p>If you click the “+” icon below the certificates pane, you can request a new iOS Development Certificate.</p>
 		</div>
 		<div>
 			<p><img src="/img/request_ios_development_certificate.png" alt="Requesting an iOS development certificate in Xcode"></p>
@@ -144,6 +143,56 @@
 		</div>
 	</article>
 	<!-- END: Request your certificates -->
+
+	<!-- START: Configure the device for development -->
+	<article>
+		<a name="readyDevice"></a>
+		<h3>Configure the device for development</h3>
+		<div>
+			<p>All we need to do here is plug in the iPhone or iPad to your computer with the USB cable</p>
+			<p>Make sure that your device is ready by seeing a screen like this in iTunes:</p>
+		</div>
+		<div>
+			<p><img src="/img/itunes_connect_ios_device.png" alt="Connecting your iOS device to iTunes"></p>
+		</div>
+		<div>
+			<p>Next, you want to go back to Xcode 6 and go into Devices window by either pressing SHIFT+CMD+2 or using the menu option here:</p>
+			<p><img src="/img/xcode6_organizer_menu_option.png" alt="Xcode 6 organizer menu option"></p>
+		</div>
+		<div>
+			<p>Then along the left hand side, you’ll see the device that you have connected (along with all the previous devices you’ve connected before).</p>
+			<p>Choose the currently connected device from the list.</p>
+			<p>copy the identifier ID by double clicking on the ID.</p>
+			<p><img src="/img/xcode6_device_view.png" alt="Xcode 6 device view"></p>
+		</div>
+		<div>
+			<p>Now to add the device to the Member Center. open up devices in your <a href="https://developer.apple.com/account/ios/device/deviceList.action">apple developer account</a> </p>
+			<p><img src="/img/ios_devies_view.png" alt="account view all devices"></p>
+			<p>Click on the '+' icon on the top right corner and fill the device name and the UDID copied above.</p>
+			<p>Click continue and register.</p>
+		</div>
+	</article>
+	<!-- END: Configure the device for development -->
+
+
+	<!-- START: Create a provisioning profile for your app  -->
+	<article>
+		<a name="provisioningProfile"></a>
+		<h3>Create a provisioning profile for your app</h3>
+		<div>
+			<p>Next, login to your <a href="https://developer.apple.com/account/ios/identifiers/bundle/bundleList.action" onclick="__gaTracker('send', 'event', 'outbound-article', 'https://developer.apple.com/account/ios/identifiers/bundle/bundleList.action', 'iOS Provisioning Portal');" target="_blank">iOS Provisioning Portal</a>; it’s time to create the App ID and iOS provisioning profile for your app!</p>
+		</div>
+		<div>
+			<p>Get the Bundle ID of your project</p>
+			<p><img src="/img/itunes_connect_ios_device.png" alt="Connecting your iOS device to iTunes"></p>
+		</div>
+		<div>
+			<p>Next, you want to go back to Xcode 6 and go into Devices window by either pressing SHIFT+CMD+2 or using the menu option here:</p>
+			<p><img src="/img/xcode6_organizer_menu_option.png" alt="Xcode 6 organizer menu option"></p>
+		</div>
+	</article>
+	<!-- END: Create a provisioning profile for your app  -->
+
 
 	</body>
 </html>
