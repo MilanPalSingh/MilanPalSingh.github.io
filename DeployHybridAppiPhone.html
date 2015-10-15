@@ -8,8 +8,8 @@
 	<h1>Deploying Hybrid App on an iPhone</h1>
 	<p> Steps to follow:</p>
 	<ol>
-		<li><a href="#setUpIonic"> Set Up Ionic </a></li>
-		<li><a href="#buildIOS"> Build App for IOS </a></li>
+		<li><a href="#setUpIonic"> Set Up Ionic and Build for IOS </a></li>
+		<!-- <li><a href="#buildIOS"> Build App for IOS </a></li> -->
 		<li><a href="#openXcode"> Open App in Xcode </a></li>
 		<li><a href="#requestCertificates"> Request your certificates </a></li>
 		<li><a href="#readyDevice"> Configure the device for development </a></li>
@@ -17,6 +17,79 @@
 		<li><a href="#installProfile"> Make sure your app is set to use that Xcode provisioning profile </a></li>
 		<li><a href="#deployFromXcode"> Finally deploy the app to the device </a></li>
 	</ol>
-	<p>I'm hosted with GitHub Pages.</p>
+
+	<!-- START: Setting up ionic project -->
+	<article>
+		<a name="setUpIonic"></a>
+		<h3>Seting Up Ionic </h3>
+		<div>
+			<p>Install Node <a href="https://nodejs.org/en/">click here</a> </p>
+			<p>Once the node is installed, we have to install coedova before installing the Ionic</p>
+			<p>Open up the terminal and run the following commands. </p>
+		</div>
+
+		<div class="highlight">
+			<pre>	
+				<code class="language-text" data-lang="text">$ sudo npm install -g cordova</code>
+			</pre>
+		</div>
+		<div class="highlight">
+			<pre>	
+				<code class="language-text" data-lang="text">$ sudo npm install -g ionic</code>
+			</pre>
+		</div>
+		<div>
+			<p>Create a blank ionic project</p>
+		</div>
+		<div class="highlight">
+			<pre>	
+				<code class="language-text" data-lang="text">$ ionic start myAppName blank</code>
+			</pre>
+		</div>
+		<div>
+			<p>replace the "myAppName" with the name of the your application.</p>
+			<p> once you created the application, you will see the following folder structure.</p>
+		</div>
+
+		<div class="highlight">
+			<pre>
+				<code class="language-text" data-lang="text">
+					$ cd myAppName &amp;&amp; ls
+
+					├── bower.json     // bower dependencies
+					├── config.xml     // cordova configuration
+					├── gulpfile.js    // gulp tasks
+					├── hooks          // custom cordova hooks to execute on specific commands
+					├── ionic.project  // ionic configuration
+					├── package.json   // node dependencies
+					├── platforms      // iOS/Android specific builds will reside here
+					├── plugins        // where your cordova/ionic plugins will be installed
+					├── scss           // scss code, which will output to www/css/
+					└── www            // application - JS code and libs, CSS, images, etc.
+				</code>
+			</pre>
+		</div>
+		<div>
+			<p>replace the content of "www" folder with the content of your app.</p>
+			<p>Next we will build the application for IOS. </p>
+			<p>Run the following command, make sure you the in the app folder. For me it will be "myAppName".</p>
+		</div>
+		<div class="highlight">
+			<pre>	
+				<code class="language-text" data-lang="text">$ ionic platform ios</code>
+			</pre>
+		</div>
+		<div class="highlight">
+			<pre>	
+				<code class="language-text" data-lang="text">$ ionic build ios</code>
+			</pre>
+		</div>
+
+	</article>
+	<!-- END: Setting up ionic project -->
+
+
+
+
 	</body>
 </html>
