@@ -14,7 +14,7 @@
 		<li><a href="#requestCertificates"> Request your certificates </a></li>
 		<li><a href="#readyDevice"> Configure the device for development </a></li>
 		<li><a href="#provisioningProfile"> Create a provisioning profile for your app </a></li>
-		<li><a href="#installProfile"> Make sure your app is set to use that Xcode provisioning profile </a></li>
+		<li><a href="#installProfile"> Installing the prvisioning profile to the device.</a></li>
 		<li><a href="#deployFromXcode"> Finally deploy the app to the device </a></li>
 	</ol>
 
@@ -158,7 +158,7 @@
 		</div>
 		<div>
 			<p><img src="/img/itunes_connect_ios_device.png" alt="Connecting your iOS device to iTunes"></p>
-		</div>
+		</div>	
 		<div>
 			<p>Next, you want to go back to Xcode 6 and go into Devices window by either pressing SHIFT+CMD+2 or using the menu option here:</p>
 			<p><img src="/img/xcode6_organizer_menu_option.png" alt="Xcode 6 organizer menu option"></p>
@@ -201,13 +201,51 @@
 			<p><img src="/img/select_an_app_id.png" alt="Select an app id for the new provisioning profile"></p>
 			<p>On the next screen, select the <b>development certificate</b> and click “continue”.</p>
 			<p>Now, finally you can <b>select the devices</b> that your app is allowed to be installed on so select the one that you added earlier.</p>
-			<p>On the final screen, you can give the provisioning profile a name and <b>generate it</b>.</p>
+			
 			<p>On the final screen, you can give the provisioning profile a name and <b>generate it</b>.</p>
 			<p>Click the blue <b style="color:blue;">Download</b> button and the profile will be downloaded onto your computer. Go to the location where you saved it and then <b>double-click the provisioning profile</b>.</p>
 		</div>
 	</article>
 	<!-- END: Create a provisioning profile for your app  -->
 
+	<!-- START: Installing the prvisioning profile to the device -->
+	<article>
+		<a name="installProfile"></a>
+		<h3>Installing the prvisioning profile to the device.</h3>
+		<div>
+			<p>We’re almost ready to deploy the app onto our iOS device! The last step is to make sure that our app is set to use this new profile.</p>
+			<p>Open up the devide window and right click on the your device and open up "Show Provisioning Profiles"</p>
+			<P><img src="/img/xocde_show_provisioning _profiles.jpg" alt="Show Provisioning Profiles"></p>
+		</div>
+		<div>
+			
+			<p><img src="/img/install_profile.png" alt="Install Profiles"></p>
+			<p>You can see the list of all the profiles that are installed on the device. <b>Click</b> th "+" icon on the bottom left side of the widow and intall the latest Provisioning profile that we just downloaded. </p>
+			
+		</div>
+	</article>
+	<!-- END: Installing the prvisioning profile to the device -->
 
+
+	<!-- START: Finally deploy the app to the device -->
+	<article>
+		<a name="deployFromXcode"></a>
+		<h3>Finally deploy the app to the device</h3>
+		<div>
+			<p>Before we deploy the APP in the device we need to edit some setting of the app </p>
+			<p>Next click on the root project node in your Xcode file navigator and on the right pane you’ll see the settings for your project.</p>
+			<p>Click the <b>Build Settings</b> tab and scroll down to the <b>Code Signing</b> part.</p>
+			<p><img src="/img/xcode_build_settings.png" alt="Xcode 6 build settings: code signing"></p>
+			<p>You want to make sure that the code signing identity is set to use the certificate you created in the first step.</p>
+		</div>
+		<div>
+			
+			<p>Now if everything is set up correctly, you’ll see the name of your phone in the list of deployable targets.</p>
+			<p><img src="/img/xcode_phone_build.png" alt="Selecting your device to deploy to"></p>
+			<p>If you only see “iOS Device”, it won’t work. You’ll need to actually see the name of your device in the list.</p>
+			
+		</div>
+	</article>
+	<!-- END: Finally deploy the app to the device -->
 	</body>
 </html>
